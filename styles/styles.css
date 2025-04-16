@@ -3,9 +3,103 @@
 /* ===== NEXT WRITE GLOBAL STYLES, THEN USE MEDIA QUERIES FOR LAYOUT/STYLE ADJUSTMENTS ===== */
 /* ===== STARTER CSS BELOW FOR body AND p IS JUST AN EXAMPLE... YOU MAY DELETE IT ===== */
 
+/*General Settings*/
+article{
+    max-width: 60%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
 body {
-    background: magenta;
+    
 }
 p {
     font-size: 2em;
+}
+
+
+/*Menu Page Interact*/
+
+
+.layout{
+    display: grid;
+    grid-template-columns: 180px auto 180px;
+    align-items: center;
+    justify-content: center;
+    max-width:1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+@media(max-width:768px){
+    .layout{
+        grid-template-columns: 1fr;
+        text-align:center;
+    }
+}
+
+.symptoms ul{
+    list-style-type: none;
+    border: 2px;
+    padding: 30px;
+    
+   
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.symptoms li{
+    margin: 20px 0;
+
+}
+
+.symptoms a{
+    text-decoration:none;
+    color:blueviolet;
+}
+
+.symptoms a:hover{
+    color:blue;
+}
+
+.menu-interact{
+    position: relative;
+}
+
+.image-wrap img{
+    position: relative;
+    z-index:1;
+}
+
+.part{
+    position: absolute;
+    cursor: pointer;
+    background-color:antiquewhite;
+    z-index: 2;
+}
+
+.part.head{
+    top: 30px;
+    left: 90px;
+    width: 80px;
+    height: 80px;
+}
+
+.part.body{
+    top: 130px;
+    left: 70px;
+    width: 140px;
+    height: 180px;
+}
+
+.tooltip{
+    position:fixed;
+    display:none;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.highlight{
+    background-color:aquamarine;
+    font-weight: bold;
 }
