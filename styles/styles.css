@@ -5,7 +5,7 @@
 
 /*General Settings*/
 article{
-    max-width: 60%;
+    max-width: 70%;
     margin-left:auto;
     margin-right:auto;
   }
@@ -17,10 +17,11 @@ p {
     font-size: 2em;
 }
 
+*{
+    box-sizing: border-box;
+}
 
 /*Menu Page Interact*/
-
-
 .layout{
     display: grid;
     grid-template-columns: 180px auto 180px;
@@ -79,17 +80,17 @@ p {
 }
 
 .part.head{
-    top: 30px;
-    left: 90px;
-    width: 80px;
-    height: 80px;
+    top: 10px;
+    left: 60px;
+    width: 100px;
+    height: 100px;
 }
 
 .part.body{
     top: 130px;
-    left: 70px;
-    width: 140px;
-    height: 180px;
+    left: 140px;
+    width: 180px;
+    height: 260px;
 }
 
 .tooltip{
@@ -102,4 +103,132 @@ p {
 .highlight{
     background-color:aquamarine;
     font-weight: bold;
+}
+
+
+
+/* Report Page*/
+
+@keyframes fadeIn{
+    from{opacity: 0;}
+    to{opacity: 1;}
+    
+}
+
+.modal{
+    animation: fadeIn 0.5s ease forwards;
+
+   
+    display: none;
+    width: 70%;
+    top: 5rem;
+    bottom: 5rem;
+    left: auto;
+    right: auto;
+    position: fixed;
+    z-index: 1000;
+    
+    overflow:hidden;
+
+    display: grid;
+    justify-content:center;
+    align-items: center;
+
+    background-color:bisque;
+    background-image: url('/images/1.svg');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid purple;
+}
+
+
+.modal-content{
+    padding: 3rem;
+    width: 90%;
+    position:relative;
+    text-align:left;
+    margin: 0 auto;
+    max-height: 90vh;
+
+    overflow-y: auto;
+    scrollbar-width: none;
+    
+}
+
+.close-btn{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 2rem; 
+}
+
+.modal-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "header header"
+        "description image";
+    gap: 2rem;
+    align-items: start;
+}
+
+.header{
+    text-align: left;
+    grid-area: header;
+}
+
+.header p{
+    font-size: 1rem;
+    background-color:antiquewhite;
+    padding: 2rem;
+    margin-bottom: -1rem;
+    border: 3px solid #81874E;
+}
+
+.description{
+    grid-area: description;
+    font-size: 1rem;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.8rem;
+    
+}
+
+.ingredients, .steps{
+    background-color: #81874E;
+    padding: 1.5rem;
+    text-align: left;
+    margin-top: 1rem;
+    border: 3px solid #8D527E;
+
+    max-height: 190px;
+    min-height: 190px;
+    overflow-y: auto;
+}
+
+.image{
+    max-width: 100%;
+    grid-area: image;
+    text-align: right;
+    background-color: antiquewhite;
+    border: 3px solid #81874E;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+@media(max-width: 1200px){
+    .modal-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "description"
+        "image";
+    }
+    .image{
+        text-align: center;
+    }
 }

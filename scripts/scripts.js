@@ -68,7 +68,7 @@ function updateHighlights(){
 
 
 /*Migraine interact modal*/
-document.addEventListener("DOMContentLoaded", function (){
+/*document.addEventListener("DOMContentLoaded", function (){
 const modal = document.getElementById("cross");
 const btn = document.getElementById("cross-btn");
 const span = document.getElementsByClassName("close-btn")[0];
@@ -81,3 +81,50 @@ span.onclick = function(){
 }
 
 });
+
+document.addEventListener("DOMContentLoaded", function (){
+    const modal = document.getElementById("italy");
+    const btn = document.getElementById("italy-btn");
+    const span = document.getElementsByClassName("close-btn2")[0];
+    
+    btn.onclick = function(){
+        modal.style.display = "block";
+    }
+    span.onclick = function(){
+        modal.style.display = "none";
+    }
+    
+    });*/
+
+document.addEventListener("DOMContentLoaded", function(){
+    const modal = document.querySelectorAll(".modal");
+    const closeBtn = document.querySelectorAll(".close-btn");
+
+    function closeAllModals(){
+        modal.forEach(modal => {
+            modal.style.display = "none";
+        });
+    }
+
+    document.getElementById("cross-btn").onclick = function (){
+        closeAllModals();
+        document.getElementById("cross").style.display = "block";
+    };
+    
+    document.getElementById("italy-btn").onclick = function (){
+        closeAllModals();
+        document.getElementById("italy").style.display = "block";
+    };
+
+    document.getElementById("china-btn").onclick = function (){
+        closeAllModals();
+        document.getElementById("china").style.display = "block";
+    };
+
+    closeBtn.forEach(span => {
+        span.onclick = function (){
+            closeAllModals();
+        }
+    })
+
+})
