@@ -49,14 +49,38 @@ part.addEventListener('mouseleave', () => {
 
 part.addEventListener('click', () => {
     console.log('Clicked:', part);
-    selectedGroup = part.classList.contains('head')? 'head' : 'body';
+    if(part.classList.contains('face')){
+        selectedGroup = 'face';
+    }
+    else if(part.classList.contains('head')){
+        selectedGroup = 'head';
+    }
+    else if(part.classList.contains('back')){
+        selectedGroup = 'back';
+    }
+    else if(part.classList.contains('forehead')){
+        selectedGroup = 'forehead';
+    }
+    else{
+        selectedGroup = 'body';
+    }
+    /*selectedGroup = part.classList.contains('head')? 'head' : 'body';*/
     updateHighlights();
 });
+
+/*function updateHighlights(){
+    document.querySelectorAll('.symptoms li').forEach(li => {
+        const group = li.getAttribute('data-group');
+        li.classList.toggle('highlight', group === selectedGroup);
+    });
+}*/
 
 function updateHighlights(){
     document.querySelectorAll('.symptoms li').forEach(li => {
         const group = li.getAttribute('data-group');
-        li.classList.toggle('highlight', group === selectedGroup);
+        const match = group ===selectedGroup;
+        li.classList.toggle('highlight', match);
+        li.classList.toggle('visible', match);
     });
 }
 

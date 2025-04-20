@@ -21,6 +21,12 @@ p {
     box-sizing: border-box;
 }
 
+.map-page{
+    background-color:#81874E;
+    background-image:url('/images/27.png');
+}
+
+
 /*Menu Page Interact*/
 .layout{
     display: grid;
@@ -51,7 +57,12 @@ p {
 
 .symptoms li{
     margin: 20px 0;
+    display: none;
 
+}
+
+.symptoms li.visible{
+    display: list-item;
 }
 
 .symptoms a{
@@ -74,23 +85,45 @@ p {
 
 .part{
     position: absolute;
-    cursor: pointer;
-    background-color:antiquewhite;
+    background: transparent;
+    cursor: url('/images/29.svg'), pointer;
     z-index: 2;
 }
 
 .part.head{
-    top: 10px;
+    top: 5px;
     left: 60px;
     width: 100px;
-    height: 100px;
+    height: 45px;
 }
 
 .part.body{
-    top: 130px;
+    top: 120px;
     left: 140px;
-    width: 180px;
-    height: 260px;
+    width: 120px;
+    height: 280px;
+}
+
+.part.face{
+    top: 75px;
+    left: 80px;
+    width: 70px;
+    height: 45px;
+}
+
+.part.back{
+    top: 100px;
+    left: 260px;
+    width: 60px;
+    height: 200px;
+
+}
+
+.part.forehead{
+    top: 50px;
+    left: 60px;
+    width: 70px;
+    height: 25px;
 }
 
 .tooltip{
@@ -104,6 +137,24 @@ p {
     background-color:aquamarine;
     font-weight: bold;
 }
+
+/*Map of Earth*/
+
+h1{
+    text-align: center;
+}
+
+.earth-img{
+   display: flex;
+   justify-content: center;
+}
+
+.earth-img:hover{
+    color:white;
+}
+
+
+
 
 
 
@@ -134,8 +185,8 @@ p {
     justify-content:center;
     align-items: center;
 
-    background-color:bisque;
-    background-image: url('/images/1.svg');
+    background-color:#ECE0CD;
+    background-image: url('/images/28.svg');
     background-size: cover;
     background-position: center;
     border: 5px solid purple;
@@ -158,7 +209,7 @@ p {
 .close-btn{
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
     cursor: pointer;
     z-index: 1001;
     font-size: 2rem; 
