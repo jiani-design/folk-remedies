@@ -1,12 +1,12 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
 /*home page button*/
-const StartedBtn = document.getElementById("Started");
+/*const StartedBtn = document.getElementById("Started");
 if(StartedBtn){
     StartedBtn.addEventListener("click", () => {
         window.location.href = "menu.html";
     });
-}
+}*/
 
 /*menu page interaction*/
 /*document.addEventListener("DOMContentLoaded",()=> {
@@ -64,7 +64,7 @@ part.addEventListener('click', () => {
     else{
         selectedGroup = 'body';
     }
-    /*selectedGroup = part.classList.contains('head')? 'head' : 'body';*/
+
     updateHighlights();
 });
 
@@ -86,39 +86,34 @@ function updateHighlights(){
 
 });
 
+/*jump to menu*/
+document.addEventListener("DOMContentLoaded", function(){
+    const modalHome =document.getElementById("started");
+    const goBack = document.querySelector(".go-back");
+    const startBtn = document.getElementById("Started");
+    const home = document.getElementById("home");
+
+    goBack.addEventListener('click', function (){
+        modalHome.style.display = "none";
+        home.style.display = "block";
+        window.scrollTo({top: 0, behavior:"smooth"});  
+    });
+
+    startBtn.onclick = function(){
+        modalHome.style.display ="block";
+        home.style.display = "none";
+        modalHome.scrollIntoView({behavior: "smooth", block: "start"});
+    }
 
 
-
-
-
-/*Migraine interact modal*/
-/*document.addEventListener("DOMContentLoaded", function (){
-const modal = document.getElementById("cross");
-const btn = document.getElementById("cross-btn");
-const span = document.getElementsByClassName("close-btn")[0];
-
-btn.onclick = function(){
-    modal.style.display = "block";
-}
-span.onclick = function(){
-    modal.style.display = "none";
-}
+    /*document.getElementById("Started").onclick = function(){
+        const modalStart = document.getElementById("started");
+        modalStart.style.display = "block";
+        modalStart.scrollIntoView({behavior: "smooth", block: "start"});
+    };*/
 
 });
 
-document.addEventListener("DOMContentLoaded", function (){
-    const modal = document.getElementById("italy");
-    const btn = document.getElementById("italy-btn");
-    const span = document.getElementsByClassName("close-btn2")[0];
-    
-    btn.onclick = function(){
-        modal.style.display = "block";
-    }
-    span.onclick = function(){
-        modal.style.display = "none";
-    }
-    
-    });*/
 
 document.addEventListener("DOMContentLoaded", function(){
     const modal = document.querySelectorAll(".modal");
@@ -129,20 +124,20 @@ document.addEventListener("DOMContentLoaded", function(){
             modal.style.display = "none";
         });
     }
-
-    document.getElementById("cross-btn").onclick = function (){
+    
+    document.getElementById("btn-one").onclick = function (){
         closeAllModals();
-        document.getElementById("cross").style.display = "block";
+        document.getElementById("one").style.display = "block";
     };
     
-    document.getElementById("italy-btn").onclick = function (){
+    document.getElementById("btn-two").onclick = function (){
         closeAllModals();
-        document.getElementById("italy").style.display = "block";
+        document.getElementById("two").style.display = "block";
     };
 
-    document.getElementById("china-btn").onclick = function (){
+    document.getElementById("btn-three").onclick = function (){
         closeAllModals();
-        document.getElementById("china").style.display = "block";
+        document.getElementById("three").style.display = "block";
     };
 
     closeBtn.forEach(span => {
@@ -151,4 +146,4 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     })
 
-})
+});

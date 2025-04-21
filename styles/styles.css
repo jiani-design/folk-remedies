@@ -4,13 +4,132 @@
 /* ===== STARTER CSS BELOW FOR body AND p IS JUST AN EXAMPLE... YOU MAY DELETE IT ===== */
 
 /*General Settings*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Encode+Sans:wght@100..900&family=Fredericka+the+Great&family=Indie+Flower&family=Kaushan+Script&family=Kurale&family=Lora:ital,wght@0,400..700;1,400..700&family=Luxurious+Roman&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&family=Rasa:ital,wght@0,300..700;1,300..700&family=Rubik+Doodle+Shadow&family=Shadows+Into+Light&family=Sorts+Mill+Goudy:ital@0;1&family=Space+Grotesk:wght@300..700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&family=Vollkorn:ital,wght@0,400..900;1,400..900&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
+
 article{
     max-width: 70%;
     margin-left:auto;
     margin-right:auto;
   }
 
-  
+  body{
+    text-align: center;
+  }
+
+
+/*home page*/
+
+.home-page{
+    background-image: url('../images/27.png');
+}
+.home-page h1{
+    text-align: center;
+    padding: 3rem;
+    margin: 0 auto;
+    margin-top: 30vh;
+    margin-bottom: 15vh;
+
+    color:#004225;
+    font-size: 6rem;
+    font-family: Cabin Sketch, serif;
+    font-weight: 400;
+    max-width: 90%;
+}
+
+
+
+.home-page nav > ul{
+        position: fixed;
+        top: 2rem;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        margin-top: 2rem;
+        
+        display: flex;
+        padding: 0.04rem;
+        list-style: none;
+        justify-content: center;
+        gap: 3rem;
+      }
+      
+.home-page nav > ul li{
+        font-family: Cabin Sketch, serif;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding: 6px;
+        gap: 3.5rem;
+        border: 2px;
+      }
+
+#Started{
+    font-family: Cabin Sketch, serif;
+    font-size: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0;
+
+    margin-bottom: 10rem;
+
+    background-color:#ECE0CD;
+    color:#004225;
+    border: 2px solid #415B25;
+ 
+}
+
+#Started:hover{
+    color: #ECE0CD;
+    background-color:#81874E;
+}
+
+
+/*menu page*/
+
+.modal-home{
+    margin-bottom: 5rem;
+}
+
+
+.modal-home h1{
+    font-family:Cabin Sketch, serif;
+    font-size: 3rem;
+    padding: 0;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.modal-home h2{
+    font-family: Yrsa, serif;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.home-headline{
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.go-back{
+    display: flex;
+    
+    font-size: 1.5rem;
+    font-family: Yrsa, serif;
+
+    background-color:#81874E;
+    color:#ECE0CD;
+    border: 2px solid #004225;
+
+}
+
+.go-back:hover{
+    color:#004225;
+    background-color:#ECE0CD;
+}
+
+
 p {
     font-size: 2em;
 }
@@ -20,9 +139,9 @@ p {
 }
 
 .map-page{
-    background-color:#81874E;
-    background-image:url('/images/27.png');
+    background-image:url('../images/27.png');
 }
+
 
 
 /*Menu Page Interact*/
@@ -47,6 +166,11 @@ p {
     list-style-type: none;
     border: 2px;
     padding: 30px;
+
+    
+    font-family: Yrsa, serif;
+    font-size: 1.2rem;
+    
     
    
     justify-content: space-between;
@@ -65,12 +189,26 @@ p {
 
 .symptoms a{
     text-decoration:none;
-    color:blueviolet;
+    color:#004225;
 }
 
 .symptoms a:hover{
-    color:blue;
+    color:#ECE0CD;
 }
+
+.highlight{
+    background-color:#81874E;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 2px solid #004225;
+}
+
+.highlight:hover{
+    background-color:#8D527E;
+}
+
 
 .menu-interact{
     position: relative;
@@ -84,7 +222,7 @@ p {
 .part{
     position: absolute;
     background: transparent;
-    cursor: url('/images/29.svg'), pointer;
+    cursor: url('../images/29.svg'), pointer;
     z-index: 2;
 }
 
@@ -131,29 +269,69 @@ p {
     z-index: 999;
 }
 
-.highlight{
-    background-color:aquamarine;
-    font-weight: bold;
-}
+
 
 /*Map of Earth*/
+.map-page h1{
+    text-align: center;
+    margin-top: 10rem;
 
-h1{
+    font-family: Cabin Sketch, serif;
+    font-weight: 300;
+    font-size: 3rem;
+    color:#004225;
+}
+
+.map-page h2{
+    font-family: Cabin Sketch, serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color:#415B25;
+}
+
+.earth-overlap{
+    position: relative;
+    display: inline-block;
     text-align: center;
 }
 
 .earth-img{
-   display: flex;
-   justify-content: center;
+    display: block;
+    height: auto;
+    cursor: url('../images/2.svg'), auto;
 }
 
-.earth-img:hover{
-    color:white;
+.all-btns{
+    position: absolute;
+    top: 45%;
+    display: flex;
+    gap: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: auto;
 }
 
+.all-btns button{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: Cabin Sketch, serif;
+    font-weight: 300;
 
+    color:#004225;
 
+    background-color: #ECE0CD;
+    border: 2px solid #81874E;
 
+}
+
+.all-btns button:hover{
+    cursor: url('../images/30.svg'), auto;
+    color:#ECE0CD;
+    background-color: #81874E;
+    border: 2px solid #004225;
+}
 
 
 /* Report Page*/
@@ -184,7 +362,7 @@ h1{
     align-items: center;
 
     background-color:#ECE0CD;
-    background-image: url('/images/28.svg');
+    background-image: url('../images/28.svg');
     background-size: cover;
     background-position: center;
     border: 5px solid purple;
@@ -230,12 +408,51 @@ h1{
 }
 
 .header p{
-    font-size: 1rem;
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.2rem;
     background-color:antiquewhite;
     padding: 2rem;
     margin-bottom: -1rem;
     border: 3px solid #81874E;
 }
+
+
+.header h2{
+    font-family: Cabin Sketch, serif;
+    color:#ECE0CD;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.ingredients h3{
+    font-family: Cabin Sketch, serif;
+    color:#ECE0CD;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.ingredients ul{
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.2rem;
+    color:#ECE0CD;
+}
+
+.steps h3{
+    font-family: Cabin Sketch, serif;
+    color:#ECE0CD;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+
+.steps ol{
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.2rem;
+    color:#ECE0CD;
+}
+
+
+
 
 .description{
     grid-area: description;
