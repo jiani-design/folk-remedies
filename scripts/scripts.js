@@ -102,7 +102,15 @@ document.addEventListener("DOMContentLoaded", function(){
     startBtn.onclick = function(){
         modalHome.style.display ="block";
         home.style.display = "none";
-        modalHome.scrollIntoView({behavior: "smooth", block: "start"});
+
+        const scrollPage =modalHome.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: scrollPage,
+            behavior: "smooth"
+
+        });
+        
+        /*modalHome.scrollIntoView({behavior: "smooth", block: "start"});*/
     }
 
 
@@ -124,6 +132,12 @@ document.addEventListener("DOMContentLoaded", function(){
             modal.style.display = "none";
         });
     }
+
+    document.addEventListener('click', function(e){
+        if(e.target.classList.contains('close-btn')){
+            closeAllModals();
+        }
+    });
     
     document.getElementById("btn-one").onclick = function (){
         closeAllModals();

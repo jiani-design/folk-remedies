@@ -25,10 +25,10 @@ article{
 }
 .home-page h1{
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
     margin: 0 auto;
-    margin-top: 30vh;
-    margin-bottom: 15vh;
+    margin-top: 20vh;
+    margin-bottom: -2vh;
 
     color:#004225;
     font-size: 5rem;
@@ -37,11 +37,26 @@ article{
     max-width: 90%;
 }
 
+.home-page h2{
+    margin-top: -2vh;
+    margin-bottom: 10vh;
+    font-family: Yrsa, serif;
+    font-weight: 300;
+    font-size: 2rem;
+
+    color:#415B25;
+}
+
+#home .earth-img img{
+    width: 25rem;
+    height: 25rem;
+}
+
 
 
 .home-page nav > ul{
         position: fixed;
-        top: 2rem;
+        top: 0;
         left: 0;
         width: 100%;
         z-index: 999;
@@ -52,6 +67,9 @@ article{
         list-style: none;
         justify-content: center;
         gap: 3rem;
+
+        background-color:#8D527E;
+        border: 2px solid #004225;
       }
       
 .home-page nav > ul li{
@@ -64,6 +82,10 @@ article{
         border: 2px;
       }
 
+.home-page nav > ul li:hover{
+    color:#ECE0CD;
+}
+
 #Started{
     font-family: Cabin Sketch, serif;
     font-size: 2.5rem;
@@ -72,6 +94,7 @@ article{
     border-radius: 0;
 
     margin-bottom: 10rem;
+    margin-top: 3rem;
 
     background-color:#ECE0CD;
     color:#004225;
@@ -101,6 +124,7 @@ article{
 }
 
 .modal-home h2{
+    margin-top: 10rem;
     font-family: Yrsa, serif;
     font-size: 2rem;
     font-weight: 300;
@@ -112,22 +136,22 @@ article{
     gap: 0;
 }
 
-.go-back{
+/*.go-back{
     display: flex;
     
     font-size: 1.5rem;
-    font-family: Yrsa, serif;
+    font-family: Cabin Sketch, serif;
 
-    background-color:#81874E;
-    color:#ECE0CD;
-    border: 2px solid #004225;
+
+    color:#415B25;
+    
 
 }
 
 .go-back:hover{
     color:#004225;
     background-color:#ECE0CD;
-}
+}*/
 
 
 p {
@@ -163,9 +187,11 @@ p {
 }
 
 .symptoms ul{
+    justify-self: center;
     list-style-type: none;
     border: 2px;
     padding: 30px;
+    width: fit-content;
 
     
     font-family: Yrsa, serif;
@@ -177,10 +203,24 @@ p {
     gap: 30px;
 }
 
-.symptoms li{
-    margin: 20px 0;
+.symptoms ul li{
+    margin: 30px 0;
     display: none;
+    font-family: Yrsa, serif;
+    font-weight:300;
+    font-size: 2rem;
 
+    background-color:#81874E;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 2px solid #004225;
+
+}
+
+.symptoms ul li:hover{
+    background-color:#8D527E;
 }
 
 .symptoms li.visible{
@@ -196,7 +236,7 @@ p {
     color:#ECE0CD;
 }
 
-.highlight{
+/*.highlight{
     background-color:#81874E;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -207,7 +247,7 @@ p {
 
 .highlight:hover{
     background-color:#8D527E;
-}
+}*/
 
 
 .menu-interact{
@@ -301,6 +341,15 @@ p {
     text-align: center;
 }
 
+@keyframes rotateEarth{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 .earth-img{
     height: auto;
     cursor: url('../images/2.svg'), auto;
@@ -310,6 +359,27 @@ p {
     width: 100%;
     height: auto;
     margin: 0 auto;
+    animation: rotateEarth 30s linear infinite;
+    transform-origin: center center;
+}
+
+.earth-img img:hover{
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse{
+    from{
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+.map-page .earth-img img{
+    animation: pulse 1s ease-in-out infinite alternate;
 }
 
 .all-btns{
@@ -337,12 +407,25 @@ p {
 
 }
 
+@keyframes pulse{
+    from{
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
 .all-btns button:hover{
     cursor: url('../images/30.svg'), auto;
     color:#ECE0CD;
     background-color: #81874E;
     border: 2px solid #004225;
+    animation: pulse 1s ease-in-out infinite alternate;
 }
+
 
 
 /* Report Page*/
@@ -352,6 +435,7 @@ p {
     to{opacity: 1;}
     
 }
+
 
 .modal{
     animation: fadeIn 0.5s ease forwards;
@@ -398,6 +482,11 @@ p {
     cursor: pointer;
     z-index: 1001;
     font-size: 2rem; 
+    color:purple;
+}
+
+.close-btn:hover{
+    color:#ECE0CD;
 }
 
 .modal-grid{
@@ -428,7 +517,7 @@ p {
 
 .header h2{
     font-family: Cabin Sketch, serif;
-    color:#ECE0CD;
+    color:black;
     font-weight: 300;
     font-size: 2rem;
 }
