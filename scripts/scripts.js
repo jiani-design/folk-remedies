@@ -33,7 +33,42 @@ if(StartedBtn){
 /*Menu Interact*/
 const tooltip =document.getElementById("tooltip");
 let selectedGroup = null;
+document.querySelectorAll('svg path[id]').forEach(path => {
+    const partId = path.id;
 
+    path.addEventListener('mouseenter', () => {
+        path.setAttribute('data-original-fill', path.getAttribute('fill'));
+        path.setAttribute('fill', '#D45A5A');
+        path.setAttribute('fill-opacity', '0.6');
+
+    });
+    
+    path.addEventListener('mouseleave', () => {
+        path.setAttribute('fill', path.getAttribute('data-original-fill'));
+        path.setAttribute('fill-opacity', '1');
+    });
+
+    path.addEventListener('click', () => {
+        selectedGroup = partId;
+        console.log("Clicked:", selectedGroup);
+        updateHighlights(selectedGroup);
+    });
+});
+
+function updateHighlights(group){
+    const allSymptoms = document.querySelectorAll('.symptoms li');
+
+    allSymptoms.forEach(li => {
+        const groupAttr = li.getAttribute('data-group');
+        if(groupAttr === group){
+            li.classList.add('visible');
+        }else{
+            li.classList.remove('visible');
+        }
+    });
+}
+
+/*
 document.querySelectorAll('.part').forEach(part =>{
 part.addEventListener('mousemove', (e) => {
     const label = part.getAttribute('data-label');
@@ -75,16 +110,18 @@ part.addEventListener('click', () => {
     });
 }*/
 
+
+/*
 function updateHighlights(){
     document.querySelectorAll('.symptoms li').forEach(li => {
         const group = li.getAttribute('data-group');
-        const match = group ===selectedGroup;
+        const match = group === selectedGroup;
         li.classList.toggle('highlight', match);
         li.classList.toggle('visible', match);
     });
-}
+}*/
 
-});
+
 
 /*jump to menu*/
 document.addEventListener("DOMContentLoaded", function(){
