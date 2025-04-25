@@ -427,7 +427,7 @@ svg path:hover{
 
     color:#004225;
 
-    background-color:#81874E;
+    background-color:#ECE0CD;
     border: 2px solid #004225;
 
 }
@@ -482,33 +482,60 @@ svg path:hover{
 
 
 /*italy*/
+.italy{
+    background: linear-gradient(to right, #006847 33%, white 34%, white 66%, #CE1126 67%);
+}
+.italy:hover{
+    background: none;
+}
 .gradient-italy{
     display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: black;
+    transition: all 0.3s ease;
+}
+.italy:hover .gradient-italy{
+    background-image: linear-gradient(to right, gold 20%, #CE1126 40%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color:transparent;
-    border-color: #004225;
-    transition: all 0.3s ease;
-    background-image:linear-gradient(to right, #006847 33%, white 46%, white 56%, #CE1126 66%);
-}
-.italy:hover {
-    background-image: linear-gradient(to right, 
-    #006847 20%, #006847 30%, white 50%, white 60%, #CE1126 80%, #CE1126 90%);
-    background-clip: border-box;
-    -webkit-background-clip: border-box;
-    background-color: transparent;
+    color: transparent;
 
-}
-.italy:hover .gradient-italy{
-    background: none;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-text-fill-color: black;
-    color:#ECE0CD;
 }
 
 /*china*/
+.china{
+    background: linear-gradient(to right, #CE1126 40%);
+}
+.china:hover{
+    background: none;
+}
+.gradient-china{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: gold;
+    transition: all 0.3s ease;
+}
+.china:hover .gradient-china{
+    background-image: linear-gradient(to right, gold 20%, #CE1126 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+
+
+/*
 .gradient-china{
     display: inline-block;
     background-clip: text;
@@ -517,10 +544,10 @@ svg path:hover{
     color:transparent;
     border-color: #004225;
     transition: all 0.3s ease;
-    background-image:linear-gradient(to right, gold 20%, red 40%);
+    background-image:linear-gradient(to right, gold 20%, #CE1126 40%);
 }
 .china:hover {
-    background-image: linear-gradient(to right, gold 20%, red 40%);
+    background-image: linear-gradient(to right, #CE1126 0%, #CE1126 100%);
     background-clip: border-box;
     -webkit-background-clip: border-box;
     background-color: transparent;
@@ -530,9 +557,9 @@ svg path:hover{
     background: none;
     -webkit-background-clip: border-box;
     background-clip: border-box;
-    -webkit-text-fill-color: black;
+    -webkit-text-fill-color: gold;
     color:#ECE0CD;
-}
+}*/
 
 
 
