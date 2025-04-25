@@ -28,7 +28,7 @@ article{
 /*home page*/
 
 .home-page{
-    background-image: url('../images/27.png');
+    background-image: url('../images/background.png');
 }
 .home-page h1{
     text-align: center;
@@ -71,13 +71,20 @@ article{
         padding: 0.04rem;
         padding-top: 0;
         list-style: none;
-        justify-content: center;
+        justify-content: end;
+        padding-left: 2rem;
+        padding-right: 2rem;
         gap: 3rem;
 
         background-color:#8D527E;
         border: 2px solid #004225;
       }
-      
+
+.home-page nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .home-page nav > ul li{
         font-family: Cabin Sketch, serif;
         font-size: 1.5rem;
@@ -85,12 +92,81 @@ article{
         padding-right: 1rem;
         padding: 6px;
         gap: 3.5rem;
-        border: 2px;
         color:#81874E;
+
       }
 
 .home-page nav > ul li:hover{
     color:#ECE0CD;
+}
+
+.map-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.04rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 3rem;
+    padding-top: 0;
+    list-style: none;
+    
+  
+    background-color:#8D527E;
+    border: 2px solid #004225;
+  }
+
+.map-nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.map-nav .nav-left li{
+    list-style: none;
+    font-family: Cabin Sketch, serif;
+    font-size: 1.5rem;
+    padding: 6px;
+    color: #81874E;
+   
+}
+.map-nav .nav-center li{
+    list-style: none;
+    font-family: Cabin Sketch, serif;
+    font-size: 1.5rem;
+    padding: 6px;
+    color: #81874E;
+    
+}
+
+.map-nav .nav-center{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+.map-page nav > ul li{
+    font-family: Cabin Sketch, serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 6px;
+    gap: 3.5rem;
+    border: 2px;
+    color:#81874E;
+  }*/
+
+.map-nav li:hover{
+color:#ECE0CD;
 }
 
 #Started{
@@ -142,23 +218,6 @@ article{
     gap: 0;
 }
 
-/*.go-back{
-    display: flex;
-    
-    font-size: 1.5rem;
-    font-family: Cabin Sketch, serif;
-
-
-    color:#415B25;
-    
-
-}
-
-.go-back:hover{
-    color:#004225;
-    background-color:#ECE0CD;
-}*/
-
 
 p {
     font-size: 2em;
@@ -169,7 +228,7 @@ p {
 }
 
 .map-page{
-    background-image:url('../images/27.png');
+    background-image:url('../images/background.png');
 }
 
 
@@ -183,7 +242,7 @@ p {
     justify-content: center;
     max-width:1200px;
     margin: 0 auto;
-    gap: 20px;
+    gap: 10px;
 }
 
 .image-wrap svg{
@@ -283,12 +342,14 @@ svg path:hover{
     font-weight: 300;
     font-size: 3rem;
     color:#004225;
+    padding: 1rem;
 }
 
 .map-page h2{
     font-family: Cabin Sketch, serif;
     font-weight: 300;
     font-size: 1.5rem;
+    padding: 2rem;
     color:#415B25;
 }
 
@@ -356,17 +417,18 @@ svg path:hover{
 }
 
 .all-btns button{
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    font-size: 2rem;
+    padding: 1rem;
     padding-left: 1rem;
     padding-right: 1rem;
     font-family: Cabin Sketch, serif;
-    font-weight: 300;
+    font-weight: bold;
+    transition: all 0.3s ease;
 
     color:#004225;
 
-    background-color: #ECE0CD;
-    border: 2px solid #81874E;
+    background-color:#81874E;
+    border: 2px solid #004225;
 
 }
 
@@ -389,16 +451,97 @@ svg path:hover{
     animation: pulse 1s ease-in-out infinite alternate;
 }
 
+/*cultures and colors*/
+
+/*cross-cultural*/
+.gradient-cross{
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:transparent;
+    border-color: #004225;
+    transition: all 0.3s ease;
+    background-image:linear-gradient(to right, #006847 33%, white 66%, #CE1126 66%);
+}
+.cross:hover {
+    background-image: linear-gradient(to right, 
+    #006847 20%, #006847 30%, white 50%, white 60%, #CE1126 80%, #CE1126 90%);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-color: transparent;
+
+}
+.cross:hover .gradient-cross{
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: black;
+    color:#ECE0CD;
+}
+
+
+/*italy*/
+.gradient-italy{
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:transparent;
+    border-color: #004225;
+    transition: all 0.3s ease;
+    background-image:linear-gradient(to right, #006847 33%, white 46%, white 56%, #CE1126 66%);
+}
+.italy:hover {
+    background-image: linear-gradient(to right, 
+    #006847 20%, #006847 30%, white 50%, white 60%, #CE1126 80%, #CE1126 90%);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-color: transparent;
+
+}
+.italy:hover .gradient-italy{
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: black;
+    color:#ECE0CD;
+}
+
+/*china*/
+.gradient-china{
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color:transparent;
+    border-color: #004225;
+    transition: all 0.3s ease;
+    background-image:linear-gradient(to right, gold 20%, red 40%);
+}
+.china:hover {
+    background-image: linear-gradient(to right, gold 20%, red 40%);
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    background-color: transparent;
+    
+}
+.china:hover .gradient-china{
+    background: none;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: black;
+    color:#ECE0CD;
+}
+
 
 
 /* Report Page*/
-
 @keyframes fadeIn{
     from{opacity: 0;}
     to{opacity: 1;}
     
 }
-
 
 .modal{
     animation: fadeIn 0.5s ease forwards;

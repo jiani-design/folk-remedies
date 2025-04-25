@@ -36,21 +36,44 @@ let selectedGroup = null;
 document.querySelectorAll('svg path[id]').forEach(path => {
     const partId = path.id;
 
+    const originalFill = path.getAttribute('fill');
+    path.setAttribute('data-original-fill', originalFill);
+
     path.addEventListener('mouseenter', () => {
+        /*
         path.setAttribute('data-original-fill', path.getAttribute('fill'));
         path.setAttribute('fill', '#D45A5A');
-        path.setAttribute('fill-opacity', '0.6');
+        path.setAttribute('fill-opacity', '0.6');*/
+
+        if(selectedGroup !== partId){
+            path.setAttribute('fill', '#D45A5A');
+            path.setAttribute('fill-opacity', '0.6');
+        }
 
     });
     
     path.addEventListener('mouseleave', () => {
+
+        /*
         path.setAttribute('fill', path.getAttribute('data-original-fill'));
-        path.setAttribute('fill-opacity', '1');
+        path.setAttribute('fill-opacity', '1');*/
+
+        if(selectedGroup !== partId){
+            path.setAttribute('fill', path.getAttribute('data-original-fill'));
+            path.setAttribute('fill-opacity', '1');
+        }
     });
 
     path.addEventListener('click', () => {
         selectedGroup = partId;
-        console.log("Clicked:", selectedGroup);
+        /*console.log("Clicked:", selectedGroup);*/
+        document.querySelectorAll('svg path[id]').forEach(p => {
+            p.setAttribute('fill', p.getAttribute('data-original-fill'));
+            p.setAttribute('fill-opacity', '1');
+        });
+
+        path.setAttribute('fill', '#B44343');
+        path.setAttribute('fill-opacity', '1');
         updateHighlights(selectedGroup);
     });
 });
@@ -136,9 +159,10 @@ document.addEventListener("DOMContentLoaded", function(){
         window.scrollTo({top: 0, behavior:"smooth"});  
     });
 
-    startBtn.onclick = function(){
+    startBtn.addEventListener('click', function(){
         modalHome.style.display ="block";
         home.style.display = "none";
+    
 
         const scrollPage =modalHome.getBoundingClientRect().top + window.pageYOffset;
         window.scrollTo({
@@ -148,6 +172,12 @@ document.addEventListener("DOMContentLoaded", function(){
         });
         
         /*modalHome.scrollIntoView({behavior: "smooth", block: "start"});*/
+    });
+
+    if(window.location.hash === "#started"){
+        modalHome.style.display = "block";
+        home.style.display = "none";
+        window.history.replaceState(null,null, 'index.html');
     }
 
 
@@ -163,6 +193,12 @@ document.addEventListener("DOMContentLoaded", function(){
 document.addEventListener("DOMContentLoaded", function(){
     const modal = document.querySelectorAll(".modal");
     const closeBtn = document.querySelectorAll(".close-btn");
+
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+            closeAllModals();
+        }
+    });
 
     function closeAllModals(){
         modal.forEach(modal => {
