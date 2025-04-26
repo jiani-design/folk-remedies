@@ -153,13 +153,13 @@ document.addEventListener("DOMContentLoaded", function(){
     const startBtn = document.getElementById("Started");
     const home = document.getElementById("home");
 
-    goBack.addEventListener('click', function (){
+    goBack.addEventListener("click", function (){
         modalHome.style.display = "none";
         home.style.display = "block";
         window.scrollTo({top: 0, behavior:"smooth"});  
     });
 
-    startBtn.addEventListener('click', function(){
+    startBtn.addEventListener("click", function(){
         modalHome.style.display ="block";
         home.style.display = "none";
     
@@ -211,7 +211,31 @@ document.addEventListener("DOMContentLoaded", function(){
             closeAllModals();
         }
     });
+
+    document.getElementById("btn-one").addEventListener("click", function(){
+        closeAllModals();
+        document.getElementById("one").style.display = "block";
+    });
+
+    document.getElementById("btn-two").addEventListener("click", function(){
+        closeAllModals();
+        document.getElementById("two").style.display = "block";
+    });
+
+    document.getElementById("btn-three").addEventListener("click", function(){
+        closeAllModals();
+        document.getElementById("three").style.display = "block";
+    });
+
+    closeBtn.forEach(span => {
+        span.addEventListener("click", function(){
+            closeAllModals();
+        });
+    });
     
+    });
+    
+    /*
     document.getElementById("btn-one").onclick = function (){
         closeAllModals();
         document.getElementById("one").style.display = "block";
@@ -231,6 +255,7 @@ document.addEventListener("DOMContentLoaded", function(){
         span.onclick = function (){
             closeAllModals();
         }
-    })
+    })*/
 
-});
+
+

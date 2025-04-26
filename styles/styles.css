@@ -54,10 +54,24 @@ article{
     color:#415B25;
 }
 
+
+@keyframes pulse{
+    from{
+        transform: scale(1);
+
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+}
+
+
 #home .earth-img img{
     width: 100%;
     height: auto;
     max-width: 25rem;
+    animation: pulse 1s ease-in-out infinite alternate;
 }
 
 .home-page nav > ul{
@@ -76,9 +90,18 @@ article{
         padding-right: 2rem;
         gap: 3rem;
 
-        background-color:#8D527E;
+        background-color:#742861;
         border: 2px solid #004225;
       }
+
+
+      @media(max-width:768px){
+       .home-page nav > ul{
+        display: flex;
+        justify-content: center;
+       }
+    
+    }
 
 .home-page nav a{
     text-decoration: none;
@@ -92,12 +115,14 @@ article{
         padding-right: 1rem;
         padding: 6px;
         gap: 3.5rem;
-        color:#81874E;
+        color:#A5A820;
 
       }
 
 .home-page nav > ul li:hover{
     color:#ECE0CD;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px black);
 }
 
 .map-nav{
@@ -118,7 +143,7 @@ article{
     list-style: none;
     
   
-    background-color:#8D527E;
+    background-color:#742861;
     border: 2px solid #004225;
   }
 
@@ -130,10 +155,11 @@ article{
 
 .map-nav .nav-left li{
     list-style: none;
-    font-family: Cabin Sketch, serif;
+    font-family: Yrsa, serif;
     font-size: 1.5rem;
     padding: 6px;
-    color: #81874E;
+    color: white;
+    
    
 }
 .map-nav .nav-center li{
@@ -141,7 +167,7 @@ article{
     font-family: Cabin Sketch, serif;
     font-size: 1.5rem;
     padding: 6px;
-    color: #81874E;
+    color: #A5A820;
     
 }
 
@@ -167,6 +193,8 @@ article{
 
 .map-nav li:hover{
 color:#ECE0CD;
+transform: scale(1.1);
+filter: drop-shadow(0 0 6px black);
 }
 
 #Started{
@@ -304,7 +332,7 @@ svg path:hover{
 }
 
 .symptoms ul li:hover{
-    background-color:#8D527E;
+    background-color:#742861;
 }
 
 .symptoms li.visible{
@@ -339,7 +367,7 @@ svg path:hover{
     margin-top: 5rem;
 
     font-family: Cabin Sketch, serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 3rem;
     color:#004225;
     padding: 1rem;
@@ -349,9 +377,13 @@ svg path:hover{
     font-family: Cabin Sketch, serif;
     font-weight: 300;
     font-size: 1.5rem;
-    padding: 2rem;
+    padding: 1rem;
     color:#415B25;
+    margin-bottom: 2rem;
+    margin-top: -2rem;
 }
+
+
 
 .earth-overlap{
     position: relative;
@@ -376,7 +408,6 @@ svg path:hover{
 
 .earth-img{
     height: auto;
-    cursor: url('../images/2.svg'), auto;
 }
 
 .earth-img img{
@@ -446,8 +477,8 @@ svg path:hover{
 .all-btns button:hover{
     cursor: url('../images/ship.svg'), auto;
     color:#ECE0CD;
-    background-color:#004225;
-    border: 2px solid #8D527E;
+    background-color:#8A8AB9;
+    border: 2px solid #742861;
     animation: pulse 1s ease-in-out infinite alternate;
 }
 
@@ -843,7 +874,7 @@ svg path:hover{
 }
 
 
-/*middle eastw*/
+/*middle east*/
 .middle-east{
     background:linear-gradient(to right, #1e2640 25%, 	#922c40 26%, #922c40 50%,
     #dc9750 51%, 	#dc9750 75%, #e5c100 76%);
@@ -958,6 +989,8 @@ svg path:hover{
 
 .close-btn:hover{
     color:#ECE0CD;
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px black);
 }
 
 .modal-grid{
@@ -991,6 +1024,20 @@ svg path:hover{
     color:black;
     font-size: 2rem;
 }
+
+.mexico-bg .header h2{
+    color: white;
+}
+
+.india-bg .header h2{
+    color: white;
+}
+
+
+
+
+
+
 
 .description{
     grid-area: description;
@@ -1080,8 +1127,48 @@ svg path:hover{
     background-image: url('../images/east-europe.png');
 }
 
+.ghana-bg{
+    background-image: url('../images/ghana.png');
+}
 
-@media (max-width: 1000px){
+.arabic-bg{
+    background-image: url('../images/arabic.png');
+}
+
+.poland-bg{
+    background-image: url('../images/poland.png');
+}
+
+.ethiopia-bg{
+    background-image: url('../images/ethiopia.png');
+}
+
+.india-bg{
+    background-image: url('../images/india.png');
+}
+
+.egypt-bg{
+    background-image: url('../images/egypt.png');
+}
+
+.jamaica-bg{
+    background-image: url('../images/jamaica.png');
+}
+
+.europe-bg{
+    background-image: url('../images/europe.png');
+}
+
+.middle-east-bg{
+    background-image: url('../images/middle-east.png');
+}
+
+
+
+
+
+
+@media (max-width: 1200px){
     .home-page h1{
         font-size: 3.5rem;
         margin-top: 20vh;
@@ -1098,6 +1185,10 @@ svg path:hover{
     .modal-content{
         width: 100%;
         padding: 1.5rem;
+    }
+
+    .description{
+        width: 100%;
     }
 
     .modal-grid{
