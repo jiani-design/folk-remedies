@@ -446,38 +446,39 @@ svg path:hover{
 .all-btns button:hover{
     cursor: url('../images/ship.svg'), auto;
     color:#ECE0CD;
-    background-color: #81874E;
-    border: 2px solid #004225;
+    background-color:#004225;
+    border: 2px solid #8D527E;
     animation: pulse 1s ease-in-out infinite alternate;
 }
 
 /*cultures and colors*/
 
 /*cross-cultural*/
+.cross{
+    background:linear-gradient(to right, #C1272D 25%, #D4A017 26%, #D4A017 50%,
+    #77C3B1 51%, #77C3B1 75%, #1B3B6F 76%);
+}
+.cross:hover{
+    background: none;
+}
 .gradient-cross{
     display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
+    transition: all 0.3s ease;
+}
+.cross:hover .gradient-cross{
+    background-image:linear-gradient(to right, #C1272D 25%, #D4A017 26%, #D4A017 50%,
+    #77C3B1 51%, #77C3B1 75%, #1B3B6F 76%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color:transparent;
-    border-color: #004225;
-    transition: all 0.3s ease;
-    background-image:linear-gradient(to right, #006847 33%, white 66%, #CE1126 66%);
-}
-.cross:hover {
-    background-image: linear-gradient(to right, 
-    #006847 20%, #006847 30%, white 50%, white 60%, #CE1126 80%, #CE1126 90%);
-    background-clip: border-box;
-    -webkit-background-clip: border-box;
-    background-color: transparent;
+    color: transparent;
 
-}
-.cross:hover .gradient-cross{
-    background: none;
-    -webkit-background-clip: border-box;
-    background-clip: border-box;
-    -webkit-text-fill-color: black;
-    color:#ECE0CD;
 }
 
 
@@ -499,13 +500,15 @@ svg path:hover{
     transition: all 0.3s ease;
 }
 .italy:hover .gradient-italy{
-    background-image: linear-gradient(to right, gold 20%, #CE1126 40%);
+    background-image: linear-gradient(to right, #006847 33%, white 34%, white 66%, #CE1126 67%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 
 }
+
+
 
 /*china*/
 .china{
@@ -533,9 +536,345 @@ svg path:hover{
 
 }
 
+/*mexico*/
+.mexico{
+    background: linear-gradient(to right, #006847 33%, white 34%, white 66%, #CE1126 67%);
+}
+.mexico:hover{
+    background: none;
+}
+.gradient-mexico{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: black;
+    transition: all 0.3s ease;
+}
+.mexico:hover .gradient-mexico{
+    background-image: linear-gradient(to right, #006847 33%, white 34%, white 66%, #CE1126 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*africa*/
+.africa{
+    background: linear-gradient(to right, #561217 25%,#F8B735 26%,
+     #F8B735 50%, #F38218 51%, #F38218 75%, #2C6E63 76%);
+}
+.africa:hover{
+    background: none;
+}
+.gradient-africa{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
+    transition: all 0.3s ease;
+}
+.africa:hover .gradient-africa{
+    background-image: linear-gradient(to right, #561217 25%,
+    #F8B735 26%, #F8B735 50%, #F38218 51%, #F38218 75%, #2C6E63 76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*eastern europe*/
+.eastern-europe{
+    background: linear-gradient(to right, #131797 20%, #E4164C 21%, #E4164C 41%,
+    #F7F4EB 42%, #F7F4EB 60%, #EE7D0D 61%, #EE7D0D 80%, #0E6632 80%);
+}
+.eastern-europe:hover{
+    background: none;
+}
+.gradient-eastern-europe{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: black;
+    transition: all 0.3s ease;
+}
+.eastern-europe:hover .gradient-eastern-europe{
+    background-image: linear-gradient(to right, #131797 20%, #E4164C 21%, #E4164C 41%,
+    #F7F4EB 42%, #F7F4EB 60%, #EE7D0D 61%, #EE7D0D 80%, #0E6632 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*ghana*/
+.ghana{
+    background: linear-gradient(to right, #EF3340 33%, #FFD100 34%, #FFD100 66%,
+    #009739 67%);
+}
+.ghana:hover{
+    background: none;
+}
+.gradient-ghana{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: black;
+    transition: all 0.3s ease;
+}
+.ghana:hover .gradient-ghana{
+    background-image: linear-gradient(to right, #EF3340 33%, #FFD100 34%, #FFD100 66%,
+    #009739 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*arabic*/
+.arabic{
+    background: linear-gradient(to right, #B11C1F 25%, #BBA052 26%, #BBA052 50%,
+    #8A356A 51%, #8A356A 75%, #2C346F 76%);
+}
+.arabic:hover{
+    background: none;
+}
+.gradient-arabic{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
+    transition: all 0.3s ease;
+}
+.arabic:hover .gradient-arabic{
+    background-image:linear-gradient(to right, #B11C1F 25%, #BBA052 26%, #BBA052 50%,
+    #8A356A 51%, #8A356A 75%, #2C346F 76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*poland*/
+.poland{
+    background:linear-gradient(to top, #DC143C  50%, white 51%);
+}
+.poland:hover{
+    background: none;
+}
+.gradient-poland{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: black;
+    transition: all 0.3s ease;
+}
+.poland:hover .gradient-poland{
+    background-image:linear-gradient(to top, #DC143C 50%, white 51%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
 
 
-/*
+/*ethiopia*/
+.ethiopia{
+    background:linear-gradient(to top, #EF3340  33%, #FEDD00 34%, #FEDD00 66%, 
+    #009A44 67%);
+}
+.ethiopia:hover{
+    background: none;
+}
+.gradient-ethiopia{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #0645B1;
+    transition: all 0.3s ease;
+}
+.ethiopia:hover .gradient-ethiopia{
+    background-image:linear-gradient(to top, #EF3340  33%, #FEDD00 34%, #FEDD00 66%, 
+    #009A44 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*india*/
+.india{
+    background:linear-gradient(to top, #046A38 33%, white 34%, white 66%, 
+    #FF671F 67%);
+}
+.india:hover{
+    background: none;
+}
+.gradient-india{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #06038D;
+    transition: all 0.3s ease;
+}
+.india:hover .gradient-india{
+    background-image:linear-gradient(to top, #046A38 33%, white 34%, white 66%, 
+    #FF671F 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+/*india*/
+.egypt{
+    background:linear-gradient(to top, black 33%, white 34%, white 66%, 
+    #C8102E 67%);
+}
+.egypt:hover{
+    background: none;
+}
+.gradient-egypt{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #C09300;
+    transition: all 0.3s ease;
+}
+.egypt:hover .gradient-egypt{
+    background-image:linear-gradient(to top, black 33%, white 34%, white 66%, 
+    #C8102E 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+
+/*jamaica*/
+.jamaica{
+    background:linear-gradient(to top, #009B3A 100%);
+}
+.jamaica:hover{
+    background: none;
+}
+.gradient-jamaica{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: #FED100;
+    transition: all 0.3s ease;
+}
+.jamaica:hover .gradient-jamaica{
+    background-image:linear-gradient(to right, black 33%, #FED100 34%,  #FED100 66%, 
+    #009B3A 67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+
+/*europe*/
+.europe{
+    background:linear-gradient(to right, #1a2634 25%, 	#203e5f 26%, #203e5f 50%,
+    #ffcc00 51%, #ffcc00 75%, #fee5b1 76%);
+}
+.europe:hover{
+    background: none;
+}
+.gradient-europe{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
+    transition: all 0.3s ease;
+}
+.europe:hover .gradient-europe{
+    background-image:linear-gradient(to right, #1a2634 25%, 	#203e5f 26%, #203e5f 50%,
+    #ffcc00 51%, #ffcc00 75%, #fee5b1 76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+
+/*middle eastw*/
+.middle-east{
+    background:linear-gradient(to right, #1e2640 25%, 	#922c40 26%, #922c40 50%,
+    #dc9750 51%, 	#dc9750 75%, #e5c100 76%);
+}
+.middle-east:hover{
+    background: none;
+}
+.gradient-middle-east{
+    display: inline-block;
+    color: black;
+    border: 2px solid transparent;
+
+    background-clip: border-box;
+    -webkit-background-clip: border-box;
+    -webkit-text-fill-color: white;
+    transition: all 0.3s ease;
+}
+.middle-east:hover .gradient-middle-east{
+    background-image:linear-gradient(to right, #1e2640 25%, 	#922c40 26%, #922c40 50%,
+    #dc9750 51%, 	#dc9750 75%, #e5c100 76%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+}
+
+
+
+
+/*reversed
 .gradient-china{
     display: inline-block;
     background-clip: text;
@@ -573,10 +912,12 @@ svg path:hover{
 .modal{
     animation: fadeIn 0.5s ease forwards;
 
+
+    box-sizing: border-box;
     display: none;
     width: 70%;
     top: 5rem;
-    bottom: 5rem;
+    bottom: 2rem;
     left: auto;
     right: auto;
     position: fixed;
@@ -589,14 +930,12 @@ svg path:hover{
     align-items: center;
 
     background-color:#ECE0CD;
-    background-image: url('../images/28.svg');
     background-size: cover;
     background-position: center;
     border: 5px solid purple;
 }
 
 .modal-content{
-    padding: 3rem;
     width: 90%;
     position:relative;
     text-align:left;
@@ -604,8 +943,7 @@ svg path:hover{
     max-height: 90vh;
 
     overflow-y: auto;
-    scrollbar-width: none;
-    
+    scrollbar-width: none; 
 }
 
 .close-btn{
@@ -647,12 +985,20 @@ svg path:hover{
     border: 3px solid #81874E;
 }
 
-
 .header h2{
     font-family: Cabin Sketch, serif;
+    font-weight: bold;
     color:black;
-    font-weight: 300;
     font-size: 2rem;
+}
+
+.description{
+    grid-area: description;
+    font-size: 1rem;
+    gap: 0.8rem;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .ingredients h3{
@@ -664,7 +1010,7 @@ svg path:hover{
 
 .ingredients ul{
     font-family: Sorts Mill Goudy, serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color:#ECE0CD;
 }
 
@@ -675,21 +1021,10 @@ svg path:hover{
     font-size: 1.5rem;
 }
 
-
 .steps ol{
     font-family: Sorts Mill Goudy, serif;
-    font-size: 1.2rem;
-    color:#ECE0CD;
-}
-
-.description{
-    grid-area: description;
     font-size: 1rem;
-    
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 0.8rem;
-    
+    color:#ECE0CD;
 }
 
 .ingredients, .steps{
@@ -698,6 +1033,10 @@ svg path:hover{
     text-align: left;
     margin-top: 1rem;
     border: 3px solid #8D527E;
+
+    /*max-height: none;
+    min-height: auto;
+    overflow-y: visible;*/
 
     max-height: 190px;
     min-height: 190px;
@@ -712,20 +1051,35 @@ svg path:hover{
     border: 3px solid #81874E;
     margin-top: 1rem;
     margin-bottom: 4rem;
+
 }
 
-/*@media(max-width: 1200px){
-    .modal-grid{
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "header"
-        "description"
-        "image";
-    }
-    .image{
-        text-align: center;
-    }
-}*/
+/*background*/
+
+.italy-bg{
+    background-image: url('../images/italy.png');
+}
+
+.cross-bg{
+    background-image: url('../images/cross-culture.png');
+}
+
+.china-bg{
+    background-image: url('../images/china.png');
+}
+
+.mexico-bg{
+    background-image: url('../images/mexico.png');
+}
+
+.africa-bg{
+    background-image: url('../images/africa.png');
+}
+
+.east-europe-bg{
+    background-image: url('../images/east-europe.png');
+}
+
 
 @media (max-width: 1000px){
     .home-page h1{
@@ -734,12 +1088,9 @@ svg path:hover{
         padding: 1.5rem;
     }
 
-
     .modal{
         width: 100%;
-        top: 2rem;
-        bottom: 2rem;
-        padding: 1rem;
+        top: 5rem;
         left: 0;
         right: 0;
     }
