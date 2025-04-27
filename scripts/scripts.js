@@ -47,7 +47,7 @@ document.querySelectorAll('svg path[id]').forEach(path => {
 
         if(selectedGroup !== partId){
             path.setAttribute('fill', '#D45A5A');
-            path.setAttribute('fill-opacity', '0.6');
+            path.setAttribute('fill-opacity', '1');
         }
 
     });
@@ -69,7 +69,7 @@ document.querySelectorAll('svg path[id]').forEach(path => {
         /*console.log("Clicked:", selectedGroup);*/
         document.querySelectorAll('svg path[id]').forEach(p => {
             p.setAttribute('fill', p.getAttribute('data-original-fill'));
-            p.setAttribute('fill-opacity', '1');
+            p.setAttribute('fill-opacity', '1')
         });
 
         path.setAttribute('fill', '#B44343');

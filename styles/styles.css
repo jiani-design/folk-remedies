@@ -298,7 +298,9 @@ filter: drop-shadow(0 0 6px black);
        .home-page nav > ul{
         display: flex;
         justify-content: center;
+        gap: 2rem;
        }
+
     
     }
 
@@ -313,7 +315,7 @@ filter: drop-shadow(0 0 6px black);
         padding-left: 1rem;
         padding-right: 1rem;
         padding: 6px;
-        gap: 3.5rem;
+        gap: 3rem;
         color:#A5A820;
 
       }
@@ -376,6 +378,14 @@ filter: drop-shadow(0 0 6px black);
     justify-content: center;
     padding: 0;
     margin: 0;
+}
+
+@media(max-width:768px){
+    .map-nav .nav-center{
+        display: flex;
+        justify-content: start;
+        gap: 0.8rem;
+       } 
 }
 
 /*
@@ -676,9 +686,16 @@ svg path:hover{
 .all-btns button:hover{
     cursor: url('../images/ship.svg'), auto;
     color:#ECE0CD;
-    background-color:#8A8AB9;
+    background-color:#87804E;
     border: 2px solid #742861;
     animation: pulse 1s ease-in-out infinite alternate;
+
+    font-family: Passion One, serif;
+    font-weight: bold;
+
+    -webkit-text-stroke: 1.8px black;
+    -webkit-text-fill-color: transparent;
+  
 }
 
 /*cultures and colors*/
