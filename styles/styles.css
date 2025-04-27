@@ -758,7 +758,7 @@ svg path:hover{
     transition: all 0.3s ease;
 }
 .china:hover .gradient-china{
-    background-image: linear-gradient(to right, #CE1126 0%, #CE1126 100%);
+    background-image: linear-gradient(to right, gold 25%, #CE1126 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
