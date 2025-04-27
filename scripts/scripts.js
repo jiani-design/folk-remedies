@@ -179,14 +179,6 @@ document.addEventListener("DOMContentLoaded", function(){
         home.style.display = "none";
         window.history.replaceState(null,null, 'index.html');
     }
-
-
-    /*document.getElementById("Started").onclick = function(){
-        const modalStart = document.getElementById("started");
-        modalStart.style.display = "block";
-        modalStart.scrollIntoView({behavior: "smooth", block: "start"});
-    };*/
-
 });
 
 
@@ -212,50 +204,32 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
-    document.getElementById("btn-one").addEventListener("click", function(){
-        closeAllModals();
-        document.getElementById("one").style.display = "block";
-    });
-
-    document.getElementById("btn-two").addEventListener("click", function(){
-        closeAllModals();
-        document.getElementById("two").style.display = "block";
-    });
-
-    document.getElementById("btn-three").addEventListener("click", function(){
-        closeAllModals();
-        document.getElementById("three").style.display = "block";
-    });
-
     closeBtn.forEach(span => {
         span.addEventListener("click", function(){
             closeAllModals();
         });
     });
-    
-    });
-    
-    /*
-    document.getElementById("btn-one").onclick = function (){
+
+    const btnOne =document.getElementById("btn-one");
+    btnOne.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("one").style.display = "block";
-    };
-    
-    document.getElementById("btn-two").onclick = function (){
+    });
+
+    const btnTwo = document.getElementById("btn-two");
+    btnTwo.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("two").style.display = "block";
-    };
+    });
 
-    document.getElementById("btn-three").onclick = function (){
+    const btnThree = document.getElementById("btn-three");
+    btnThree.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("three").style.display = "block";
-    };
-
-    closeBtn.forEach(span => {
-        span.onclick = function (){
-            closeAllModals();
-        }
-    })*/
-
+    });
+ 
+    
+});
+    
 
 

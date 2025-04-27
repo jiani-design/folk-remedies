@@ -24,9 +24,208 @@ article{
     padding: 0;
   }
 
+/*about page*/
+  .about-page{
+    background-image: url('../images/background.png');
+}
+
+.about-page nav > ul{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    
+    display: flex;
+    padding: 0.04rem;
+    padding-top: 0;
+    list-style: none;
+    justify-content: end;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 3rem;
+
+    background-color:#742861;
+    border: 2px solid #004225;
+  }
+
+
+  @media(max-width:768px){
+   .about-page nav > ul{
+    display: flex;
+    justify-content: center;
+   }
+
+}
+
+.about-page nav a{
+text-decoration: none;
+color: inherit;
+}
+
+.about-page nav > ul li{
+    font-family: Cabin Sketch, serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 6px;
+    gap: 3.5rem;
+    color:#A5A820;
+
+  }
+
+.about-page nav > ul li:hover{
+color:#ECE0CD;
+transform: scale(1.1);
+filter: drop-shadow(0 0 6px black);
+}
+
+
+.sources h4{
+    text-align: center;
+    padding: 0.5rem;
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.2rem;
+}
+
+.author h3{
+    padding: 2rem;
+    margin-top: 10rem;
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.5rem;
+}
+
+.sources{
+    padding: 3rem;
+    background-color:#87804E;
+    border: 2px solid #283204;
+}
+
+.sources a{
+    color:#ECD8CD;
+
+    }
+
+ .sources a:hover{
+        color:#742861;
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 6px black);
+        }
+
+/*project page*/
+.project-page{
+    background-image: url('../images/background.png');
+}
+
+.project-page nav > ul{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    
+    display: flex;
+    padding: 0.04rem;
+    padding-top: 0;
+    list-style: none;
+    justify-content: end;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    gap: 3rem;
+
+    background-color:#742861;
+    border: 2px solid #004225;
+  }
+
+
+  @media(max-width:768px){
+   .project-page nav > ul{
+    display: flex;
+    justify-content: center;
+   }
+
+}
+
+.project-page nav a{
+text-decoration: none;
+color: inherit;
+}
+
+.project-page h3{
+    padding: 2rem;
+    margin-top: 10rem;
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 1.5rem;
+}
+
+.project-page nav > ul li{
+    font-family: Cabin Sketch, serif;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 6px;
+    gap: 3.5rem;
+    color:#A5A820;
+
+  }
+
+.project-page nav > ul li:hover{
+color:#ECE0CD;
+transform: scale(1.1);
+filter: drop-shadow(0 0 6px black);
+}
+
+
+.project-list ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 5rem;
+    
+}
+
+.project-list li{
+    list-style: none;
+
+    font-size: 2rem;
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: Cabin Sketch, serif;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    color:#004225;
+
+    background-color:#ECE0CD;
+    border: 2px solid #004225;
+}
+
+.project-list li:hover{
+    background-color: #87804E;
+    color:#ECE0CD;
+    border: 2px solid #004225;
+}
+
+.project-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+@media(max-width:768px){
+    .project-list ul{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    }
+
+} 
+
+
+
+
 
 /*home page*/
-
 .home-page{
     background-image: url('../images/background.png');
 }
@@ -34,7 +233,7 @@ article{
     text-align: center;
     padding: 2rem;
     margin: 0 auto;
-    margin-top: 10vh;
+    margin-top: 5rem;
     margin-bottom: -2vh;
 
     color:#004225;
@@ -46,7 +245,7 @@ article{
 
 .home-page h2{
     margin-top: -2vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5rem;
     font-family: Yrsa, serif;
     font-weight: 300;
     font-size: 2rem;
@@ -543,7 +742,7 @@ svg path:hover{
 
 /*china*/
 .china{
-    background: linear-gradient(to right, #CE1126 40%);
+    background: linear-gradient(to right, #CE1126 0%, #CE1126 100%);
 }
 .china:hover{
     background: none;
@@ -559,7 +758,7 @@ svg path:hover{
     transition: all 0.3s ease;
 }
 .china:hover .gradient-china{
-    background-image: linear-gradient(to right, gold 20%, #CE1126 40%);
+    background-image: linear-gradient(to right, #CE1126 0%, #CE1126 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -819,7 +1018,7 @@ svg path:hover{
 
 /*jamaica*/
 .jamaica{
-    background:linear-gradient(to top, #009B3A 100%);
+    background:linear-gradient(to top, #009B3A 0%, #009B3A 100%);
 }
 .jamaica:hover{
     background: none;
