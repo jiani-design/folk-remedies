@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){
         modalHome.style.display = "none";
         home.style.display = "block";
         banner.style.display = "block";
+        document.querySelector(".home-page nav > ul").style.top="8.2rem";
         window.scrollTo({top: 0, behavior:"smooth"});  
     });
 
@@ -77,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
         modalHome.style.display ="block";
         home.style.display = "none";
         banner.style.display = "none";
+        document.querySelector(".home-page nav > ul").style.top="0";
     
 
         const scrollPage =modalHome.getBoundingClientRect().top + window.pageYOffset;
@@ -93,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function(){
         modalHome.style.display = "block";
         home.style.display = "none";
         banner.style.display = "none";
+        document.querySelector(".home-page nav > ul").style.top="0";
         window.history.replaceState(null,null, 'index.html');
     }
 });
