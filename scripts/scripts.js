@@ -1,34 +1,5 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
-/*home page button*/
-/*const StartedBtn = document.getElementById("Started");
-if(StartedBtn){
-    StartedBtn.addEventListener("click", () => {
-        window.location.href = "menu.html";
-    });
-}*/
-
-/*menu page interaction*/
-/*document.addEventListener("DOMContentLoaded",()=> {
-    const bodyParts = document.querySelectorAll(".body-part");
-
-    bodyParts.forEach(part => {
-        const symptoms = part.querySelectorAll(".symptom");
-
-        part.addEventListener("mouseenter", () => {
-            symptoms.forEach(symptom => {
-                symptom.style.display ="block";
-            });
-        });
-
-        part.addEventListener("mouseleave", () => {
-            symptoms.forEach(symptom => {
-                symptom.style.display ="none";
-            });
-        });
-});
-
-});*/
 
 /*Menu Interact*/
 const tooltip =document.getElementById("tooltip");
@@ -84,59 +55,6 @@ function updateHighlights(group){
         }
     });
 }
-
-/*
-document.querySelectorAll('.part').forEach(part =>{
-part.addEventListener('mousemove', (e) => {
-    const label = part.getAttribute('data-label');
-    tooltip.style.left = e.pageX + 15 + 'px';
-    tooltip.style.top = e.pageY + 15 + 'px';
-    tooltip.style.display ='block';
-    tooltip.innerText = label;
-});
-
-part.addEventListener('mouseleave', () => {
-    tooltip.style.display='none';
-});
-
-part.addEventListener('click', () => {
-    console.log('Clicked:', part);
-    if(part.classList.contains('face')){
-        selectedGroup = 'face';
-    }
-    else if(part.classList.contains('head')){
-        selectedGroup = 'head';
-    }
-    else if(part.classList.contains('back')){
-        selectedGroup = 'back';
-    }
-    else if(part.classList.contains('forehead')){
-        selectedGroup = 'forehead';
-    }
-    else{
-        selectedGroup = 'body';
-    }
-
-    updateHighlights();
-});
-
-/*function updateHighlights(){
-    document.querySelectorAll('.symptoms li').forEach(li => {
-        const group = li.getAttribute('data-group');
-        li.classList.toggle('highlight', group === selectedGroup);
-    });
-}*/
-
-
-/*
-function updateHighlights(){
-    document.querySelectorAll('.symptoms li').forEach(li => {
-        const group = li.getAttribute('data-group');
-        const match = group === selectedGroup;
-        li.classList.toggle('highlight', match);
-        li.classList.toggle('visible', match);
-    });
-}*/
 
 
 
@@ -208,20 +126,20 @@ document.addEventListener("DOMContentLoaded", function(){
         });
     });
 
-    const btnOne =document.getElementById("btn-one");
-    btnOne.addEventListener("click", function(){
+    const btnModalOne =document.getElementById("btn-one");
+    btnModalOne.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("one").style.display = "block";
     });
 
-    const btnTwo = document.getElementById("btn-two");
-    btnTwo.addEventListener("click", function(){
+    const btnModalTwo = document.getElementById("btn-two");
+    btnModalTwo.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("two").style.display = "block";
     });
 
-    const btnThree = document.getElementById("btn-three");
-    btnThree.addEventListener("click", function(){
+    const btnModalThree = document.getElementById("btn-three");
+    btnModalThree.addEventListener("click", function(){
         closeAllModals();
         document.getElementById("three").style.display = "block";
     });

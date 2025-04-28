@@ -80,6 +80,10 @@ transform: scale(1.1);
 filter: drop-shadow(0 0 6px black);
 }
 
+.sources h1{
+    font-family: Sorts Mill Goudy, serif;
+    font-size: 2rem;
+}
 
 .sources h4{
     text-align: center;
@@ -97,7 +101,7 @@ filter: drop-shadow(0 0 6px black);
 
 .sources{
     padding: 3rem;
-    background-color:#9C9033;
+    background-color:#81874E;
     border: 2px solid #283204;
 }
 
@@ -283,7 +287,7 @@ filter: drop-shadow(0 0 6px black);
 .home-page h2{
     margin-top: -2vh;
     margin-bottom: 5rem;
-    font-family: Yrsa, serif;
+    font-family: Sorts Mill Goudy, serif;
     font-weight: 300;
     font-size: 2rem;
 
@@ -557,10 +561,6 @@ svg path:hover{
     border: 2px;
     padding: 30px;
     width: fit-content;
-
-    
-    font-family: Yrsa, serif;
-    font-size: 1.2rem;
     
     justify-content: space-between;
     gap: 30px;
@@ -569,8 +569,8 @@ svg path:hover{
 .symptoms ul li{
     margin: 30px 0;
     display: none;
-    font-family: Yrsa, serif;
-    font-weight:500;
+    font-family: Sorts Mill Goudy, serif;
+    font-weight:bold;
     font-size: 2rem;
 
     background-color:#ECE0CD;
