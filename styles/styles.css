@@ -263,24 +263,41 @@ filter: drop-shadow(0 0 6px black);
     display: flex;
     align-items: center;
     width: max-content;
-    animation: scroll-left 60s linear infinite;
+    animation: scroll-left 50s linear infinite;
 }
 
 @keyframes scroll-left{
     0%{
-        transform: translateX(100%);
+        transform: translateX(150%);
     }
     100%{
         transform: translateX(-100%);
     }
 }
 
+@media(max-width:768px){
+    .banner-scroll{
+        animation: scroll-left 30s linear infinite;
+    }
+
+    @keyframes scroll-left{
+        0%{
+            transform: translateX(60%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+}
+
+}
+
+
 
 .home-page h1{
     text-align: center;
     padding: 2rem;
     margin: 0 auto;
-    margin-top: 6rem;
+    margin-top: 4rem;
     margin-bottom: -2vh;
 
     color:#004225;
