@@ -1,7 +1,7 @@
 /* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
 
 
-/*Menu Interact*/
+/*menu interact*/
 const tooltip =document.getElementById("tooltip");
 let selectedGroup = null;
 document.querySelectorAll('svg path[id]').forEach(path => {
