@@ -54,6 +54,7 @@ article{
    .about-page nav > ul{
     display: flex;
     justify-content: center;
+    gap: 2rem;
    }
 
 }
@@ -146,6 +147,7 @@ filter: drop-shadow(0 0 6px black);
    .project-page nav > ul{
     display: flex;
     justify-content: center;
+    gap: 2rem;
    }
 
 }
@@ -222,6 +224,7 @@ filter: drop-shadow(0 0 6px black);
      display: flex;
      flex-direction: column;
      align-items: center;
+
     }
 
 } 
@@ -245,6 +248,7 @@ filter: drop-shadow(0 0 6px black);
     top: 2.6rem;
     background-color:#ECE0CD;
     border: 2px solid #742861;
+    padding: 2px;
 }
 
 .banner img{
@@ -330,7 +334,7 @@ filter: drop-shadow(0 0 6px black);
         padding-right: 2rem;
         gap: 3rem;
         margin-bottom:0;
-        border: 2px solid #004225;
+        border: 2px solid #742861;
 
         background-color:#742861;
       }
@@ -381,7 +385,6 @@ filter: drop-shadow(0 0 6px black);
     padding: 0.04rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    gap: 3rem;
     padding-top: 0;
     list-style: none;
     
@@ -399,7 +402,7 @@ filter: drop-shadow(0 0 6px black);
     list-style: none;
     font-family: Yrsa, serif;
     font-size: 1.5rem;
-    padding: 6px;
+    padding:2px;
     color:#ECE0CD;
     
    
@@ -408,17 +411,17 @@ filter: drop-shadow(0 0 6px black);
     list-style: none;
     font-family: Cabin Sketch, serif;
     font-size: 1.5rem;
-    padding: 6px;
+    padding: 8px;
     color: #C9DF00;
     
 }
 
 .map-nav .nav-center{
     display: flex;
-    gap: 3rem;
     justify-content: center;
     padding: 0;
     margin: 0;
+    gap: 2.75rem;
 }
 
 @media(max-width:768px){
