@@ -70,7 +70,7 @@ color: inherit;
     padding-right: 1rem;
     padding: 6px;
     gap: 3.5rem;
-    color:#A5A820;
+    color:#C9DF00;
 
   }
 
@@ -97,7 +97,7 @@ filter: drop-shadow(0 0 6px black);
 
 .sources{
     padding: 3rem;
-    background-color:#87804E;
+    background-color:#9C9033;
     border: 2px solid #283204;
 }
 
@@ -165,7 +165,7 @@ color: inherit;
     padding-right: 1rem;
     padding: 6px;
     gap: 3.5rem;
-    color:#A5A820;
+    color:#C9DF00;
 
   }
 
@@ -181,14 +181,15 @@ filter: drop-shadow(0 0 6px black);
     gap: 2rem;
     justify-content: center;
     margin-top: 5rem;
+    margin-bottom: 5rem;
     
 }
 
 .project-list li{
     list-style: none;
 
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 2.5rem;
+    padding: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
     font-family: Cabin Sketch, serif;
@@ -202,7 +203,7 @@ filter: drop-shadow(0 0 6px black);
 }
 
 .project-list li:hover{
-    background-color: #87804E;
+    background-color: #9C9033;
     color:#ECE0CD;
     border: 2px solid #004225;
 }
@@ -229,11 +230,47 @@ filter: drop-shadow(0 0 6px black);
 .home-page{
     background-image: url('../images/background.png');
 }
+
+.banner{
+    width: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    z-index: 998;
+    position: fixed;
+    top: 2.6rem;
+    background-color:#ECE0CD;
+    border: 2px solid #742861;
+}
+
+.banner img{
+    width: 30px;
+    height: auto;
+    margin: 0 5px;
+}
+
+.banner-scroll{
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll-left 60s linear infinite;
+}
+
+@keyframes scroll-left{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
 .home-page h1{
     text-align: center;
     padding: 2rem;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: -2vh;
 
     color:#004225;
@@ -288,9 +325,10 @@ filter: drop-shadow(0 0 6px black);
         padding-left: 2rem;
         padding-right: 2rem;
         gap: 3rem;
+        margin-bottom:0;
+        border: 2px solid #004225;
 
         background-color:#742861;
-        border: 2px solid #004225;
       }
 
 
@@ -316,7 +354,7 @@ filter: drop-shadow(0 0 6px black);
         padding-right: 1rem;
         padding: 6px;
         gap: 3rem;
-        color:#A5A820;
+        color:#C9DF00;
 
       }
 
@@ -345,7 +383,6 @@ filter: drop-shadow(0 0 6px black);
     
   
     background-color:#742861;
-    border: 2px solid #004225;
   }
 
 .map-nav a{
@@ -359,7 +396,7 @@ filter: drop-shadow(0 0 6px black);
     font-family: Yrsa, serif;
     font-size: 1.5rem;
     padding: 6px;
-    color: white;
+    color:#ECE0CD;
     
    
 }
@@ -368,7 +405,7 @@ filter: drop-shadow(0 0 6px black);
     font-family: Cabin Sketch, serif;
     font-size: 1.5rem;
     padding: 6px;
-    color: #A5A820;
+    color: #C9DF00;
     
 }
 
@@ -400,10 +437,15 @@ filter: drop-shadow(0 0 6px black);
     color:#81874E;
   }*/
 
-.map-nav li:hover{
+.map-nav .nav-center li:hover{
 color:#ECE0CD;
 transform: scale(1.1);
 filter: drop-shadow(0 0 6px black);
+}
+
+.map-nav .nav-left li:hover{
+    color: #C9DF00;
+    transform: scale(1.1);
 }
 
 #Started{
@@ -424,7 +466,7 @@ filter: drop-shadow(0 0 6px black);
 
 #Started:hover{
     color: #ECE0CD;
-    background-color:#87804E;
+    background-color:#9C9033;
 }
 
 
@@ -528,20 +570,21 @@ svg path:hover{
     margin: 30px 0;
     display: none;
     font-family: Yrsa, serif;
-    font-weight:300;
+    font-weight:500;
     font-size: 2rem;
 
-    background-color:#81804E;
+    background-color:#ECE0CD;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border: 2px solid #004225;
 
+
 }
 
 .symptoms ul li:hover{
-    background-color:#742861;
+    background-color:#9C9033;
 }
 
 .symptoms li.visible{
@@ -623,7 +666,6 @@ svg path:hover{
     width: 100%;
     height: auto;
     margin: 0 auto;
-    animation: rotateEarth 30s linear infinite;
     transform-origin: center center;
 }
 
@@ -686,14 +728,14 @@ svg path:hover{
 .all-btns button:hover{
     cursor: url('../images/ship.svg'), auto;
     color:#ECE0CD;
-    background-color:#87804E;
-    border: 2px solid #742861;
+    background-color:#ECE0CD;
+    border: 4px solid #004225;
     animation: pulse 1s ease-in-out infinite alternate;
 
-    font-family: Passion One, serif;
-    font-weight: bold;
+   font-family: Passion One, serif;
+ 
 
-    -webkit-text-stroke: 1.8px black;
+    -webkit-text-stroke: 1.2px black;
     -webkit-text-fill-color: transparent;
   
 }
@@ -1200,7 +1242,7 @@ svg path:hover{
     cursor: pointer;
     z-index: 1001;
     font-size: 2rem; 
-    color:purple;
+    color:#ECE0CD;
 }
 
 .close-btn:hover{
@@ -1235,21 +1277,18 @@ svg path:hover{
 }
 
 .header h2{
-    font-family: Cabin Sketch, serif;
+
     font-weight: bold;
-    color:black;
     font-size: 2rem;
     margin-top: 1.5rem;
-}
 
-.mexico-bg .header h2{
-    color: white;
-}
+    font-family: Passion One, serif;
+ 
 
-.india-bg .header h2{
-    color: white;
+    -webkit-text-stroke: 1.8px black;
+    -webkit-text-fill-color:#ECE0CD;
+  
 }
-
 
 
 

@@ -40,16 +40,10 @@ document.querySelectorAll('svg path[id]').forEach(path => {
     path.setAttribute('data-original-fill', originalFill);
 
     path.addEventListener('mouseenter', () => {
-        /*
-        path.setAttribute('data-original-fill', path.getAttribute('fill'));
-        path.setAttribute('fill', '#D45A5A');
-        path.setAttribute('fill-opacity', '0.6');*/
-
         if(selectedGroup !== partId){
             path.setAttribute('fill', '#D45A5A');
             path.setAttribute('fill-opacity', '1');
         }
-
     });
     
     path.addEventListener('mouseleave', () => {
@@ -152,16 +146,19 @@ document.addEventListener("DOMContentLoaded", function(){
     const goBack = document.querySelector(".go-back");
     const startBtn = document.getElementById("Started");
     const home = document.getElementById("home");
+    const banner = document.querySelector(".banner");
 
     goBack.addEventListener("click", function (){
         modalHome.style.display = "none";
         home.style.display = "block";
+        banner.style.display = "block";
         window.scrollTo({top: 0, behavior:"smooth"});  
     });
 
     startBtn.addEventListener("click", function(){
         modalHome.style.display ="block";
         home.style.display = "none";
+        banner.style.display = "none";
     
 
         const scrollPage =modalHome.getBoundingClientRect().top + window.pageYOffset;
@@ -177,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function(){
     if(window.location.hash === "#started"){
         modalHome.style.display = "block";
         home.style.display = "none";
+        banner.style.display = "none";
         window.history.replaceState(null,null, 'index.html');
     }
 });
