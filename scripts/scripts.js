@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function(){
         modalHome.style.display = "none";
         home.style.display = "block";
         banner.style.display = "block";
-        document.querySelector(".home-page nav > ul").style.top="8.2rem";
+        document.querySelector(".home-page nav > ul").style.top="0";
         window.scrollTo({top: 0, behavior:"smooth"});  
     });
 
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.querySelector(".home-page nav > ul").style.top="0";
     
 
-        const scrollPage =modalHome.getBoundingClientRect().top + window.pageYOffset;
+        const scrollPage =modalHome.getBoundingClientR$ect().top + window.pageYOffset;
         window.scrollTo({
             top: scrollPage,
             behavior: "smooth"
